@@ -13,3 +13,8 @@ EXPOSE 61616
 # This approach ensures your configuration is part of the image, making it portable.
 COPY activemq.xml /opt/activemq/conf/activemq.xml
 COPY queues.xml /opt/activemq/conf/queues.xml
+# COPY jetty.xml /opt/activemq/conf/jetty.xml
+
+
+# The base image already has a CMD or ENTRYPOINT to start ActiveMQ, so no further
+# commands are needed in this Dockerfile.
